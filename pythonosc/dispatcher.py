@@ -317,7 +317,7 @@ class Dispatcher(object):
                             )
                     if result:
                         results.append(result)
-        except osc_packet.ParseError as e:
+        except osc_packet.ParseError:
             pass
         return results
 

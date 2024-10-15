@@ -25,6 +25,24 @@ classifiers = [
 [project.urls]
 Repository = "https://github.com/attwad/python-osc"
 
+[tool.ruff.lint]
+select = [
+    "B",
+    "E",
+    "F",
+    "W",
+]
+ignore = [
+    "B904", # use "raise ... from ..."
+    "E501", # line too long
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Allow some sloppiness in examples...
+"examples/*.py" = [
+    "B",
+]
+
 [tool.mypy]
 # Would be great to turn this on, however there's too many cases it would break
 # right now.
